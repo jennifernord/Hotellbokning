@@ -11,4 +11,5 @@ public class Tables {
         this.nr = nr;
         return nr;
     }
+
 }
