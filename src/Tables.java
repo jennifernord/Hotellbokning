@@ -1,15 +1,11 @@
 public class Tables {
-    private int nr;
+    private String tableNum;
+    private Guest guest;
 
     //Constructor
-    Tables(int nr){
-        this.nr = nr;
-    }
-
-    //Methods
-    public int getNr() {
-        this.nr = nr;
-        return nr;
+    Tables(String tableNum, Guest guest){
+        this.tableNum = tableNum;
+        this.guest = guest;
     }
 
 }

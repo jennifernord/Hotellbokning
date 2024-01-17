@@ -1,7 +1,23 @@
-public class Guest {
-    private String name;
+import java.util.Scanner;
 
-    Guest(String name){
+public class Guest {
+    Scanner scan = new Scanner(System.in);
+    protected String name;
+    private Tables table;
+
+    //constructor
+    public void Guest(String name, Tables table){
         this.name = name;
+        this.table = table;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public String addTable(){
+        System.out.println("How many seats are needed? :");
+        String tableNum = scan.nextLine();
+        this.table = new Tables(tableNum, this);
+        return tableNum;
     }
 }
