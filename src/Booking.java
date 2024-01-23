@@ -1,31 +1,38 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Booking {
     Scanner scan = new Scanner(System.in);
-    private Guest guest;
-    private Tables table;
-    private Booking booking;
+    private String guestName;
+    private int tableNum;
 
-    public Guest getGuest() {
-        return guest;
+    public Booking(String guestName, int tableNum){
+        this.guestName = guestName;
+        this.tableNum = tableNum;
     }
 
-    public Booking(Guest guest, Tables table, Booking booking){
-        this.guest = guest;
-        this.table = table;
-        this.booking = booking;
+    public String getGuestName() {
+        return guestName;
     }
 
-    //Lägga till namn på bokningen
-    public void addGuest(String guestName){
+    public int getTableNum() {
+        return tableNum;
+    }
+
+    //Metod för att lägga till namn på bokning
+    public void addBooking(){
+        ArrayList<Booking> bookings = new ArrayList<>();
+
         System.out.println("Enter name of guest: ");
-        guestName = scan.nextLine();
-    }
-
-    //bordsnummer på bokningen
-    public void addTable(){
-        System.out.println("Enter number of guests: ");
+        scan.nextLine();
+        String guestName = scan.nextLine();
+        System.out.println("Enter number of seats needed: ");
         int tableNum = scan.nextInt();
-        System.out.println("Your table number is " +tableNum);
+
+        bookings.add(new Booking(guestName, tableNum));
+
+        for (Booking booking : bookings){
+            System.out.println("Name: " +booking.getGuestName() +"\nTable seats: " +booking.getTableNum());
+        }
     }
 }

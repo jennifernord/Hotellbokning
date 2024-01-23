@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Guest {
     Scanner scan = new Scanner(System.in);
     protected String name;
-    private Tables table;
+    Tables table;
 
     //constructor
-    public void Guest(String name, Tables table){
+    public Guest(String name, Tables table){
         this.name = name;
         this.table = table;
     }
