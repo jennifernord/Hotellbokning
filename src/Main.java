@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         //Menyn
         Scanner scan = new Scanner(System.in);
-        ArrayList<Booking> bookings = new ArrayList<>();
 
         while (true) {
             System.out.println("MENU\n" +
@@ -17,27 +16,12 @@ public class Main {
             try {
                 int option = scan.nextInt();
                 if (option == 1) {
-                    //new addBooking();
-                    System.out.println("Enter name of guest: ");
-                    scan.nextLine();
-                    String guestName = scan.nextLine();
-                    System.out.println("Enter number of seats needed: ");
-                    int tableNum = scan.nextInt();
-
-                    bookings.add(new Booking(guestName, tableNum));
-
-                    for (Booking booking : bookings) {
-                        System.out.println("Name: " + booking.getGuestName() + "\nTable seats: " + booking.getTableNum());
-                    }
+                    new Booking();
                 } else if (option == 2) {
-                    for (Booking booking : bookings) {
-                        System.out.println("Name: " + booking.getGuestName() + "\nTable seats: " + booking.getTableNum());
-                    }
+                    System.out.println("Work in progress");
                 } else {
                     throw new Exception("Exception message");
                 }
-
-                break;
 
             } catch (Exception e) {
                 scan.nextLine();

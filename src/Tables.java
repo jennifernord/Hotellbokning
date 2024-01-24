@@ -1,9 +1,16 @@
-public class Tables {
-    private String tableNum;
-    private Guest guest;
+import java.util.Scanner;
 
-    public Tables(String tableNum, Guest guest) {
-        this.tableNum = tableNum;
-        this.guest = guest;
+public class Tables {
+    Scanner scan = new Scanner(System.in);
+
+    private int tableNum;
+
+    public Tables() {
+        tableInfo();
+    }
+
+    private void tableInfo() {
+        System.out.println("Enter number of seats needed: ");
+        this.tableNum = scan.nextInt();
     }
 }
