@@ -11,8 +11,9 @@ public class Booking {
 
     private void Menu(){
         Guest newGuest = new Guest();
-        Tables newTable = new Tables();
         allGuests.add(newGuest);
+        Tables newTable = new Tables();
         allTables.add(newTable);
+        System.out.println("NAME: " +newGuest.guestName +"\nSEATS: " +newTable.tableNum);
     }
 }

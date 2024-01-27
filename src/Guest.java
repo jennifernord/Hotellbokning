@@ -5,6 +5,10 @@ public class Guest {
     protected String guestName;
     Tables table;
 
+    public Tables getTable() {
+        return table;
+    }
+
     //constructor
     public Guest(){
         guestInfo();
@@ -13,11 +17,5 @@ public class Guest {
     private void guestInfo() {
         System.out.println("Enter name: ");
         this.guestName = scan.nextLine();
-        System.out.println();
-        table = new Tables();
-    }
-
-    public Tables getTable() {
-        return table;
     }
 }

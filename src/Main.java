@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -8,9 +7,7 @@ public class Main {
         while (true) {
             System.out.println("MENU\n" +
                     "1. Make a booking\n" +
-                    "2. See your booking\n" +
-                    "3. See all bookings\n" +
-                    "4. See money balance\n" +
+                    "2. See all bookings\n" +
                     "Enter option here:");
 
             try {
@@ -18,7 +15,7 @@ public class Main {
                 if (option == 1) {
                     new Booking();
                 } else if (option == 2) {
-                    System.out.println("Work in progress");
+                    System.out.println("Work in progress.");
                 } else {
                     throw new Exception("Exception message");
                 }
